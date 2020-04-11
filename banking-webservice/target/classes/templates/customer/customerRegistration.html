@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Create New Product2222</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+  <header style="background-color: fuchsia;height: 30px;">
+  </header>
+   
+    <div class="container">
+        <h3>Customer Registration Setup</h3>
+        <br />
+        <span style="color: red;font-size: 18px;" id="message"></span>
+        <form action="#" method="post"  th:action="@{/customer/account/registration}" th:object="${customerdto}">
+            <table class="table table-bordered" style="width: 100%;font-size: 16px;">
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                    <input type="text" class="form-control" th:field="*{name}" id="name" />
+                     <td>Mobile:</td>
+                    <td>
+                     <input type="text" class="form-control" th:field="*{mobile}" />
+                    </td>
+                </tr>
+               <tr>
+                    <td>Email:</td>
+                    <td><input type="text" class="form-control" th:field="*{email}" /></td>
+                     <td>Job Title:</td>
+                    <td><input type="text" class="form-control" th:field="*{jobTitle}"/></td>
+                </tr>
+                
+                  <tr>
+                    <td>Address:</td>
+                    <td>
+                    <input type="text" class="form-control" th:field="*{address.address1}"/>
+                    <input type="text" class="form-control" th:field="*{address.address2}"/>
+                    <input type="text" class="form-control" th:field="*{address.city}"/>
+                    <input type="text" class="form-control" th:field="*{address.state}"/>
+                    <input type="text" class="form-control" th:field="*{address.zip}"/>
+                    </td>
+                     <td>SSN:</td>
+                    <td>
+                    <input type="text" class="form-control" th:field="*{ssn}"/>
+                    </td>
+                </tr>
+                
+                   <tr>
+                    <td>Gender:</td>
+                    <td>
+                    <select  class="form-control" th:field="*{gender}">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    </td>
+                     <td>Father Name</td>
+                    <td>
+                       <input type="text" class="form-control" th:field="*{father}"/>
+                   </td>
+                </tr>
+                
+                 <tr>
+                    <td>Qualification:</td>
+                     <td>
+                      <select  class="form-control" th:field="*{qualification}">
+                        <option value="High School">High School</option>
+                        <option value="Associate Degree">Associate Degree</option>
+                         <option value="Undergradute">Undergradute</option>
+                         <option value="Graduate">Graduate</option>
+                    </select>
+                     </td>
+                     
+                    <td> DOB</td>
+                    <td>
+                    <input type="text" class="form-control" th:field="*{dob}"/>
+                </tr>
+                <tr>
+                 <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                    <td colspan="2">
+                    <button type="submit" class="btn btn-primary">Save & Submit</button>
+                     <a href="javascript:showRoles();"><img th:src="@{/image/role.jpg}" class="img-responsive center-block" width="56"  alt="Logo" /></a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+  </div>
+  
+</body>
+</html>

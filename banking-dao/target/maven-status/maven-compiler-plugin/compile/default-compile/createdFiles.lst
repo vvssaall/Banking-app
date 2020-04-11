@@ -1,0 +1,14 @@
+com\banking\dao\repositories\AccountStatusRepository.class
+com\banking\dao\entities\RoleEntity.class
+com\banking\dao\entities\AccountStatus.class
+com\banking\dao\entities\CustomerQuestionAnswerEntity.class
+com\banking\dao\entities\AccountType.class
+com\banking\dao\entities\CustomerEntity.class
+com\banking\dao\entities\AddressEntity.class
+com\banking\dao\datapusher\DataPusher.class
+com\banking\dao\entities\LoginEntity.class
+com\banking\dao\entities\CustomerSavingEntity.class
+com\banking\dao\repositories\CustomerAccountEnquiryRepository.class
+com\banking\dao\repositories\CustomerRepository.class
+com\banking\dao\repositories\AccountTypeRepository.class
+com\banking\dao\repositories\RoleRepository.class
