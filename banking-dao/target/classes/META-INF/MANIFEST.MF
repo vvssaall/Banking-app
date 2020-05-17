@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
+Built-By: Vsal
+Build-Jdk: 13
 Implementation-Title: banking-dao
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: delep
 Implementation-Vendor-Id: com.rab3tech
-Build-Jdk: 1.8.0_241
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/onlinebanking-parent/banking-dao
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/onlinebanking-parent/banking-dao
 Created-By: Maven Integration for Eclipse
 

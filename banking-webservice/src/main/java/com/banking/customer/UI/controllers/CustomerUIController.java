@@ -108,5 +108,34 @@ public class CustomerUIController {
 		return "customer/success"; // customerEnquiry.html
 
 	}
+	
+	@GetMapping(value= {"/customer/account/forget"})
+	public String showforgetPasswordPage(Model model){
+		CustomerSavingEnquiryDto customerSavingdto = new CustomerSavingEnquiryDto();
+		// model is map which is used to carry object from controller to view
+		model.addAttribute("customerSavingdto", customerSavingdto);
+		return "customer/forgetPassword"; // customerEnquiry.html
+	}
+	
+	@PostMapping("/customer/acccount/passwordReset")
+	public String Resetpassword(@ModelAttribute CustomerSavingEnquiryDto customerSavingEnquiryDto, Model model) {
+		boolean status = customerEnquiryService.emailNotExist(customerSavingEnquiryDto.getEmail());
+//		if (status) {
+//			CustomerSavingEnquiryDto response = customerEnquiryService.save(customerSavingEnquiryDto);
+//			model.addAttribute("message",
+//					"Hey Customer , your enquiry form has been submitted successfully!!! and appref "
+//							+ response.getAppref());
+//		} else {   
+//			model.addAttribute("message",
+//					"Sorry , this email is already in use " + customerSavingEnquiryDto.getEmail());
+//		}
+		return "customer/success"; // customerEnquiry.html
+
+	}
+	
+		
+		
+	
+	
 
 }
